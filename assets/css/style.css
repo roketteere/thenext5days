@@ -68,13 +68,22 @@ button:active{
     align-items: center;
     border: 1.5px solid rgba(0, 0, 0, 0.26);
 }
-
+.location{
+    font-size: 2rem;
+    color:rgba(224, 217, 217, 0.61);
+    text-shadow: 1px 2px black;
+}
+.location:hover{
+    color: rgb(199, 89, 89);
+    
+}
 .search-box {
     width: 70%;
     padding: .8rem;
     font-size: 1.5rem;
     border-radius: 20px;
     font-weight: 200;
+    margin-left: 6px;
 }
 
 .search-button {

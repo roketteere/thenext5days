@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/49e42a52b6.js"
-      crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <title>The Next 5 Days | Weather App</title>
   </head>
   <body>
@@ -19,19 +23,18 @@
     <div class="main-body">
       <section class="search-section">
         <h2 class="search-title">Search for a City:</h2>
-        <input
-          type="text"
-          id="search-box"
-          class="search-box"
-          placeholder="San Jose" /><button
-          id="search-button"
-          class="search-button">
-          Search
-        </button>
-        <div class="section-break"></div>
-        <div id="history-body" class="history-body">
-          <button class="history-item">San Jose</button>
+        <div class="input-container">
+          <i id="location" class="fa-solid fa-location-crosshairs location"></i>
+          <input
+            type="text"
+            id="search-box"
+            class="search-box"
+            placeholder="City, State" />
         </div>
+        <button id="search-button" class="search-button">Search</button>
+
+        <div class="section-break"></div>
+        <div id="history-body" class="history-body"></div>
       </section>
       <section class="dashboard">
         <div class="dash-box">
@@ -89,7 +92,7 @@
         </div>
       </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
     <script src="/assets/js/script.js"></script>
   </body>
 </html>
