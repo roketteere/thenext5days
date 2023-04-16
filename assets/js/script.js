@@ -3,11 +3,18 @@ var searchbox = document.getElementById('search-box');
 var searchButton = document.getElementById('search-button');
 var historyBody = document.getElementById('history-body');
 var locate = document.getElementById('location');
+var historyItem = document.querySelector('.history-item')
+var his = document.getElementById('history-ph');
+
+his.setAttribute('style',"display:none;")
 
 // add last searched city to the history-box 
 function saveSearch(city,parentElement) {
     let history = `<button class="history-item">${city}</button>`;
-    parentElement.innerHTML = history
+    let hisItem = document.createElement('button')
+    hisItem.className = "history-item"
+    hisItem.innerHTML = `${city}`
+    parentElement.innerHTML += history;
 
 }
 // using the input city name, fetch weather information
@@ -35,9 +42,6 @@ function getCityCoords(city) {
         
     })
 }
-//TODO Create event listeners for searchbox
-//TODO Create input listeners for buttons
-//TODO fetch api via city etc...
 
 // get users current position and fill in the cards and dashboard
 function getCurrentLocation() {
@@ -171,15 +175,26 @@ function currentGPSConditions(currentPosition) {
     
 }
 var inputString = ''
+// event listener for history items
+document.body.addEventListener('click', function (event) {
+    console.log('ID/Class', event.target.className);
+    if (event.target.className == 'history-item') {
+        console.log('City', event.target.textContent);
+        getCityCoords(event.target.textContent.toLowerCase())
+        
+    }
+    
+})
+
 // event listener for search box "keyup" (as they type)
 searchbox.addEventListener('keyup', inputString = (event) => inputString = event.target.value);
 
 // event listener for the search box "keypress" (when they hit enter)
 searchbox.addEventListener('keypress', function (event) {
-    if(event.key === "Enter"){
+    if (event.key === "Enter") {
+        saveSearch(event.target.value.toLowerCase(),historyBody)
         console.log('City: ', event.target.value);
         getCityCoords(event.target.value.toLowerCase())
-        this.textContent = '';
         
     }
     
@@ -189,8 +204,9 @@ searchbox.addEventListener('keypress', function (event) {
 searchButton.addEventListener('click', function (event) {
     event.target;
     console.log('Search Box: ', inputString);
+    saveSearch(inputString,historyBody)
     getCityCoords(inputString.toLowerCase());
-    searchbox.textContent = '';
+    
     
 })
 
@@ -201,4 +217,6 @@ locate.addEventListener('click', function (event) {
     getCurrentLocation();
    
 })
+
+
 

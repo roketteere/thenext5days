@@ -105,8 +105,13 @@ button:active{
 
 .history-body {
     display: flex;
+    height: 200px;
+    width: 320px;
+    flex-direction: column;
     justify-content: center;
-    background-color:var(--search-bg) ;
+    align-items: center;
+    overflow: hidden auto;
+    background-color:rgba(255, 255, 255, 0) ;
   
 }
 .search-title{
