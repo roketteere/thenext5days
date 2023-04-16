@@ -22,7 +22,7 @@ function getCityCoords(city) {
     let lat = 0.0;
     let lon = 0.0;
     let savedHistory = [];
-    let url = new URL(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=501097da5c0ccc04bda86f2d077d16bb`)
+    let url = new URL(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=501097da5c0ccc04bda86f2d077d16bb`)
     savedHistory.push(city);
     fetch(url).then(response => response.json()).then(data => {
         lat = data[0].lat.toFixed(4);
@@ -62,7 +62,7 @@ function fecthForecast(lat,lon) {
     let description = ''
     let date = ''
     let API_KEY = "501097da5c0ccc04bda86f2d077d16bb"
-    let url = new URL(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=40&units=imperial&appid=${API_KEY}`)
+    let url = new URL(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=40&units=imperial&appid=${API_KEY}`)
     var weather = []
     fetch(url).then(response => response.json()).then(data => {
         city = data.city.name
