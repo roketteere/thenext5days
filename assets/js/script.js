@@ -187,7 +187,9 @@ document.body.addEventListener('click', function (event) {
 })
 
 // event listener for search box "keyup" (as they type)
-searchbox.addEventListener('keyup', inputString = (event) => inputString = event.target.value);
+searchbox.addEventListener('keyup', function (event) {
+    inputString = event.target.value
+});
 
 // event listener for the search box "keypress" (when they hit enter)
 searchbox.addEventListener('keypress', function (event) {
