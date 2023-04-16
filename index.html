@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/49e42a52b6.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>The Next 5 Days | Weather App</title>
+  </head>
+  <body>
+    <header>
+      <div class="innder-head">
+        <h1 id="page-title" class="page-title">The Next 5 Days</h1>
+      </div>
+    </header>
+    <div class="main-body">
+      <section class="search-section">
+        <h2 class="search-title">Search for a City:</h2>
+        <input
+          type="text"
+          id="search-box"
+          class="search-box"
+          placeholder="San Jose" /><button
+          id="search-button"
+          class="search-button">
+          Search
+        </button>
+        <div class="section-break"></div>
+        <div id="history-body" class="history-body">
+          <button class="history-item">San Jose</button>
+        </div>
+      </section>
+      <section class="dashboard">
+        <div class="dash-box">
+          <h2 id="dash-city" class="dash-city">San Jose</h2>
+          <h3 id="date" class="date">
+            April 15, 2023 <i class="dashcard-icon fa fa-sun"></i>
+          </h3>
+          <p id="temp">40.89 F<span>&#176;</span></p>
+          <p id="wind">15 MPH</p>
+          <p id="humidity">10 %</p>
+        </div>
+        <div id="dashcard-body" class="dashcard-body">
+          <div class="dashcard-title-body">
+            <h2 id="dashcard-body-title" class="dashcard-body-title">
+              5-Day Forecast:
+            </h2>
+          </div>
+          <div class="dashcard-box">
+            <div id="1" class="dashcard">
+              <h2 class="dashcard-tile">4/15/2023</h2>
+              <i class="dashcard-icon"></i>
+              <p class="dashcard-temp">Temp: 40.89 F<span>&#176;</span></p>
+              <p class="dashcard-wind">Wind: 15 MPH</p>
+              <p class="dashcard-humidity">Humidity: 10 %</p>
+            </div>
+            <div id="2" class="dashcard">
+              <h2 class="dashcard-tile">4/15/2023</h2>
+              <i class="dashcard-icon"></i>
+              <p class="dashcard-temp">Temp: 40.89 F<span>&#176;</span></p>
+              <p class="dashcard-wind">Wind: 15 MPH</p>
+              <p class="dashcard-humidity">Humidity: 10 %</p>
+            </div>
+            <div id="3" class="dashcard">
+              <h2 class="dashcard-tile">4/15/2023</h2>
+              <i class="dashcard-icon"></i>
+              <p class="dashcard-temp">Temp: 40.89 F<span>&#176;</span></p>
+              <p class="dashcard-wind">Wind: 15 MPH</p>
+              <p class="dashcard-humidity">Humidity: 10 %</p>
+            </div>
+            <div id="4" class="dashcard">
+              <h2 class="dashcard-tile">4/15/2023</h2>
+              <i class="dashcard-icon"></i>
+              <p class="dashcard-temp">Temp: 40.89 F<span>&#176;</span></p>
+              <p class="dashcard-wind">Wind: 15 MPH</p>
+              <p class="dashcard-humidity">Humidity: 10 %</p>
+            </div>
+            <div id="5" class="dashcard">
+              <h2 class="dashcard-tile">4/15/2023</h2>
+              <i class="dashcard-icon"></i>
+              <p class="dashcard-temp">Temp: 40.89 F<span>&#176;</span></p>
+              <p class="dashcard-wind">Wind: 15 MPH</p>
+              <p class="dashcard-humidity">Humidity: 10 %</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
