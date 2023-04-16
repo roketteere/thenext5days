@@ -207,7 +207,7 @@ searchButton.addEventListener('click', function (event) {
     event.target;
     console.log('Search Box: ', inputString);
     saveSearch(inputString,historyBody)
-    getCityCoords(inputString.toLowerCase());
+    getCityCoords(inputString);
     
     
 })
