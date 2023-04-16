@@ -124,7 +124,7 @@ function currentGPSConditions(currentPosition) {
     let description = ''
     let date = ''
     let API_KEY = "501097da5c0ccc04bda86f2d077d16bb"
-    let url = new URL(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=40&units=imperial&appid=${API_KEY}`)
+    let url = new URL(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=40&units=imperial&appid=${API_KEY}`)
     var weather = []
     fetch(url).then(response => response.json()).then(data => {
         city = data.city.name
