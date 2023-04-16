@@ -155,6 +155,27 @@ span{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+ #dash-city {
+     color: var(--blue-main);
+ }
+
+ #date {
+     color: var(--blue-secondary);
+     text-shadow: .5px .5px black;
+ }
+
+ #temp {
+     font-weight: bold;
+ }
+
+ #wind {
+     font-weight: bold;
+ }
+
+ #humidity {
+     color: indigo;
+     font-weight: bolder;
+ }
 .dashcard {
     color:white;
     background-color: rgba(164, 157, 157, 0.144);
@@ -272,25 +293,54 @@ span{
             margin: .2rem;
         }
     
-    
-    
+        .history-body{
+            
+            height: 50px;
+        }
+        
         .history-item {
             text-align: center;
         }
-                .dashcard-box {
-                    display: flex;
-                }
-        
-                .dashcard {
-                    display: flex;
-                    justify-content: baseline;
-                    width: fit-content;
-                    font-size: smaller;
-                    margin: 0;
-                    align-items: center;
-                    gap: 1rem;
-        
-                }
+        .dash-box{
+            display: flex;
+            flex-wrap: wrap ;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #dash-city{
+            color:var(--blue-main);   
+        }
+        #date{
+            color: var(--blue-secondary);
+            text-shadow: .5px .5px black;
+        }
+        #temp{
+            align-self: flex-end;
+            font-weight: bold;
+        }
+        #wind{
+            align-self:flex-end;
+            font-weight: bold;
+        }
+        #humidity{
+            align-self: flex-end;
+            font-weight: bolder;
+            color: indigo;
+        }
+        .dashcard-box {
+            display: flex;
+        }
+
+        .dashcard {
+            display: flex;
+            justify-content: baseline;
+            width: fit-content;
+            font-size: smaller;
+            margin: 0;
+            align-items: center;
+            gap: 1rem;
+
+        }
 }
 
 
