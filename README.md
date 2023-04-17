@@ -5,9 +5,11 @@
     Enter a USA city and expect to get the weather forecast for the next 5 Days.
 
 ## Screenshots & Demo
+-   ![Alt Demo](demo.gif)
+-   ![Alt Screenshot](assets/img/screenshot.png)
 
-    ![Alt Screenshot](assets/img/screenshot.png)
-
+##
+- Deployed App [TheNext5Days](https://roketteere.github.io/thenext5days/)
 ## Resources
 
 - Day.js - Formatting incoming date from OpenWeatherMap API
